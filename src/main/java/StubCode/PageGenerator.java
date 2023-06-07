@@ -1,3 +1,5 @@
+package StubCode;
+
 public class PageGenerator
 {
 

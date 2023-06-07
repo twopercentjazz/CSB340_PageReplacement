@@ -1,3 +1,5 @@
+package StubCode;
+
 public abstract class ReplacementAlgorithm
 {
 	// the number of page faults
