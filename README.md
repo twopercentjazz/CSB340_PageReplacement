@@ -17,7 +17,17 @@ for paging and is used as a tool for analysis). FIFO and LRU were close and depe
 numbers that were generated sometimes FIFO was better and sometimes LRU was better. I almost expected 
 LRU to perform better more of hte time. As far as configurations go, like I said above I used the 
 combined average fault rate from all algorithms per configuration to produce one metric I could use 
-for comparison. Like the results show below [r:20,f:7] was often the best performing configuration. 
+for comparison. Like the results show below [r:20,f:7] was often the best performing configuration when 
+I ran the simulation multiple times. This makes sense intuitivly but counter intuitavly I was expecting 
+to see Belady's anomoly come into play more, but if you look at the chart on the top right, and comparing
+the groups by reference string size, for each size category it is often the configuration with 7 frames 
+that has the smallest fault rate. It also makes sense to me that the best performing configurations 
+usually had a larger reference string size because without pre-paging all algorithms start with a 
+series of faults and if the size of the reference string is small, those faults add up quick. I wasn't 
+sure how big O factors into the results collected for this simulation, for example whether my code ran 
+at O(n) or O(n^2) the simulation results should be the same. But if this wasn't a simulation and 
+I was actually implementing real page replacement, algorithm performance would have bigger consequences. 
+
 
 
 <pre>
