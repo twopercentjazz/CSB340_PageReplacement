@@ -1,5 +1,6 @@
-package PageReplacementUtilities;
+/** This class represents page replacement input consisting of a reference list and a frame size. */
 
+package PageReplacementUtilities;
 import java.util.Random;
 
 public class InputConfiguration {

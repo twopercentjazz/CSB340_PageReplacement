@@ -1,9 +1,10 @@
-package PageReplacementAlgorithms;
+/** This class represents the FIFO Page Replacement Algorithm. */
 
+package PageReplacementAlgorithms;
 import PageReplacementUtilities.*;
 import java.util.*;
 
-public class FIFO {
+public class FIFO implements AlgorithmInterface {
     private static final AlgorithmType type = AlgorithmType.FIFO;
     private InputConfiguration input;
     private Queue<Page> frames;
@@ -17,6 +18,7 @@ public class FIFO {
         setRecord(new ArrayList<>());
     }
 
+    /** {@inheritDoc} */
     public void run() {
         fillInitialFrames();
         for (int i = input.getPageFramesSize(); i < input.getPageReferenceList().length; i++) {
@@ -60,6 +62,7 @@ public class FIFO {
         this.frames = frames;
     }
 
+    /** {@inheritDoc} */
     public int getFaults() {
         return this.faults;
     }
@@ -80,6 +83,7 @@ public class FIFO {
         this.record = record;
     }
 
+    /** {@inheritDoc} */
     public AlgorithmType getType() {
         return type;
     }
@@ -112,6 +116,7 @@ public class FIFO {
         getRecord().add(temp);
     }
 
+    /** {@inheritDoc} */
     public void printRecord() {
         System.out.println("   " + getType() + " Algorithm");
         System.out.println("---------------------");

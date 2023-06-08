@@ -1,3 +1,5 @@
+/** This class represents one page (for page replacement). */
+
 package PageReplacementUtilities;
 
 public class Page implements Comparable<Page> {

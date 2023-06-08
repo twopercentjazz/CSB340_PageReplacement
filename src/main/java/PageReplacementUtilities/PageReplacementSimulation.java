@@ -1,11 +1,8 @@
+/** This class runs the page replacement simulation for all default input with each algorithm. */
+
 package PageReplacementUtilities;
-
 import PageReplacementAlgorithms.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PageReplacementSimulation {
     private DefaultConfigurationList input;

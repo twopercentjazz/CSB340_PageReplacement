@@ -1,9 +1,10 @@
-package PageReplacementAlgorithms;
+/** This class represents the OPT Page Replacement Algorithm. */
 
+package PageReplacementAlgorithms;
 import PageReplacementUtilities.*;
 import java.util.*;
 
-public class OPT {
+public class OPT implements AlgorithmInterface {
     private static final AlgorithmType type = AlgorithmType.OPT;
     private InputConfiguration input;
     private Queue<Page> frames;
@@ -18,6 +19,7 @@ public class OPT {
         setRecord(new ArrayList<>());
     }
 
+    /** {@inheritDoc} */
     public void run() {
         fillInitialFrames();
         for (int i = input.getPageFramesSize(); i < input.getPageReferenceList().length; i++) {
@@ -30,7 +32,6 @@ public class OPT {
             }
             addToRecord();
         }
-
     }
 
     private void fillInitialFrames() {
@@ -63,6 +64,7 @@ public class OPT {
         this.frames = frames;
     }
 
+    /** {@inheritDoc} */
     public int getFaults() {
         return this.faults;
     }
@@ -83,6 +85,7 @@ public class OPT {
         this.record = record;
     }
 
+    /** {@inheritDoc} */
     public AlgorithmType getType() {
         return type;
     }
@@ -142,6 +145,7 @@ public class OPT {
         getRecord().add(temp);
     }
 
+    /** {@inheritDoc} */
     public void printRecord() {
         System.out.println("   " + getType() + " Algorithm");
         System.out.println("---------------------");

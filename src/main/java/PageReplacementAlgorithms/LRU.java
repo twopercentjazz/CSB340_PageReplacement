@@ -1,9 +1,10 @@
-package PageReplacementAlgorithms;
+/** This class represents the LRU Page Replacement Algorithm. */
 
+package PageReplacementAlgorithms;
 import PageReplacementUtilities.*;
 import java.util.*;
 
-public class LRU {
+public class LRU implements AlgorithmInterface {
     private static final AlgorithmType type = AlgorithmType.LRU;
     private InputConfiguration input;
     private Queue<Page> frames;
@@ -17,6 +18,7 @@ public class LRU {
         setRecord(new ArrayList<>());
     }
 
+    /** {@inheritDoc} */
     public void run() {
         fillInitialFrames();
         for (int i = input.getPageFramesSize(); i < input.getPageReferenceList().length; i++) {
@@ -66,6 +68,7 @@ public class LRU {
         this.frames = frames;
     }
 
+    /** {@inheritDoc} */
     public int getFaults() {
         return this.faults;
     }
@@ -86,6 +89,7 @@ public class LRU {
         this.record = record;
     }
 
+    /** {@inheritDoc} */
     public AlgorithmType getType() {
         return type;
     }
@@ -144,6 +148,7 @@ public class LRU {
         getRecord().add(temp);
     }
 
+    /** {@inheritDoc} */
     public void printRecord() {
         System.out.println("   " + getType() + " Algorithm");
         System.out.println("---------------------");

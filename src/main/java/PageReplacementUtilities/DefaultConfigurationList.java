@@ -1,5 +1,6 @@
-package PageReplacementUtilities;
+/** This class represents the 30 required configurations. */
 
+package PageReplacementUtilities;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
