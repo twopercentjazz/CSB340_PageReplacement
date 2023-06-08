@@ -4,7 +4,7 @@ import PageReplacementUtilities.*;
 public class PageReplacementDriver {
 
     public static void main(String[] args) {
-
+        //
         InputConfiguration testInput = new InputConfiguration(new int[]{1,2,3,4,1,5,6,2,1,2,3,7,6,3},4);
 
         FIFO test1 = new FIFO(testInput);
@@ -23,7 +23,7 @@ public class PageReplacementDriver {
         test3.printRecord();
         System.out.println();
 
-
+        //
         DefaultConfigurationList testDefault = new DefaultConfigurationList();
         int count = 1;
         String space = " ";
@@ -40,5 +40,11 @@ public class PageReplacementDriver {
             System.out.print(" ] RefListSize: " + config.getPageReferenceList().length);
             System.out.println();
         }
+
+        //
+        System.out.println();
+        PageReplacementSimulation sim = new PageReplacementSimulation();
+        sim.runSimulation();
+        sim.printResults();
     }
 }

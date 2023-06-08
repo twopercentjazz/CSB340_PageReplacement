@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e965402-3705-47e3-bd17-795f815972cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementAlgorithms/AlgorithmInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementAlgorithms/AlgorithmType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementAlgorithms/FIFO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementAlgorithms/LRU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementAlgorithms/OPT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/DefaultConfigurationList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/InputConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementResults.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FIFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/FIFO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LRU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/LRU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/OPT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/PageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReplacementAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StubCode/ReplacementAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageReplacementDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementSimulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677550420561</updated>
-      <workItem from="1686124205540" duration="26963000" />
+      <workItem from="1686124205540" duration="30073000" />
     </task>
     <servers />
   </component>
