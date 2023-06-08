@@ -1,6 +1,11 @@
 import PageReplacementAlgorithms.*;
 import PageReplacementUtilities.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+
 public class PageReplacementDriver {
 
     public static void main(String[] args) {
@@ -52,10 +57,44 @@ public class PageReplacementDriver {
         sim.runSimulation();
         System.out.println();
         System.out.println();
+
+        //
         sim.printFaultCountResults();
         System.out.println();
+
+        //
         sim.printFaultRateResults();
         System.out.println();
+
+        //
         sim.printFaultCountAvgPerConfig(sim.configAvgs());
+        System.out.println();
+
+        //
+        sim.printFaultRateAvgPerConfig(sim.configAvgs());
+        System.out.println();
+
+        //
+        sim.printFaultCountTotalAvgPerConfig(sim.configAvgs());
+        System.out.println();
+
+        //
+        HashMap<Double, String> results = sim.printFaultRateTotalAvgPerConfigResults(sim.configAvgs());
+        ArrayList<Double> avgList = new ArrayList<>(results.keySet());
+        avgList.sort(Comparator.naturalOrder());
+
+        //
+        System.out.println();
+        System.out.println("The Top 3 Configurations (for this run)");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("1st Place: " + results.get(avgList.get(0)) + " - with a combined average fault rate of "
+                + Math.round(avgList.get(0) * 100.00)/100.00 + "%");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("2nd Place: " + results.get(avgList.get(1)) + " - with a combined average fault rate of "
+                + Math.round(avgList.get(1) * 100.00)/100.00 + "%");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("3rd Place: " + results.get(avgList.get(2)) + " - with a combined average fault rate of "
+                + Math.round(avgList.get(2) * 100.00)/100.00 + "%");
+        System.out.println("-----------------------------------------------------------------------\n");
     }
 }

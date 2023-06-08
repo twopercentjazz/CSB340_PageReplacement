@@ -87,6 +87,72 @@ public class PageReplacementSimulation {
         }
     }
 
+    public void printFaultRateAvgPerConfig(HashMap<Integer, List<Double>> avg) {
+        int[] sizes = {10,10,10,15,15,15,20,20,20};
+        String[] configList = {"[r:10,f:3]","[r:10,f:5]","[r:10,f:7]","[r:15,f:3]",
+                "[r:15,f:5]","[r:15,f:7]","[r:20,f:3]","[r:20,f:5]","[r:20,f:7]"};
+        System.out.println("\nFault Rate Averages Per Configuration:");
+        String header = String.format("%-17s%-10s%-10s%-10s","Config Group",AlgorithmType.FIFO,
+                AlgorithmType.LRU,AlgorithmType.OPT);
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
+        for (int i = 1; i < 10; i++) {
+            System.out.println(String.format("%-17s%-10.2f%-10.2f%-10.2f",configList[i - 1],
+                    avg.get(i).get(0)/sizes[i-1] * 100,
+                    avg.get(i).get(1)/sizes[i-1] * 100,
+                    avg.get(i).get(2)/sizes[i-1] * 100));
+            System.out.println(border);
+        }
+    }
+
+    public void printFaultCountTotalAvgPerConfig(HashMap<Integer, List<Double>> avg) {
+        String[] configList = {"[r:10,f:3]","[r:10,f:5]","[r:10,f:7]","[r:15,f:3]",
+                "[r:15,f:5]","[r:15,f:7]","[r:20,f:3]","[r:20,f:5]","[r:20,f:7]"};
+        System.out.println("\nFault Count Total Average Per Configuration:");
+        String header = String.format("%-18s%-15s","Config Group","Average Count");
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
+        for (int i = 1; i < 10; i++) {
+            System.out.println(String.format("%-18s%-15.2f",configList[i - 1], (avg.get(i).get(0) +
+                    avg.get(i).get(1) + avg.get(i).get(2)) / 3));
+            System.out.println(border);
+        }
+    }
+
+    public void printFaultRateTotalAvgPerConfig(HashMap<Integer, List<Double>> avg) {
+        int[] sizes = {10,10,10,15,15,15,20,20,20};
+        String[] configList = {"[r:10,f:3]","[r:10,f:5]","[r:10,f:7]","[r:15,f:3]",
+                "[r:15,f:5]","[r:15,f:7]","[r:20,f:3]","[r:20,f:5]","[r:20,f:7]"};
+        System.out.println("\nFault Rate Total Average Per Configuration:");
+        String header = String.format("%-18s%-15s","Config Group","Average Rate");
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
+        for (int i = 1; i < 10; i++) {
+            System.out.println(String.format("%-18s%-15.2f",configList[i - 1], (avg.get(i).get(0)/sizes[i-1] * 100 +
+                    avg.get(i).get(1)/sizes[i-1] * 100 + avg.get(i).get(2)/sizes[i-1] * 100) / 3));
+            System.out.println(border);
+        }
+    }
+
+    public HashMap<Double, String> printFaultRateTotalAvgPerConfigResults(HashMap<Integer, List<Double>> avg) {
+        HashMap<Double, String> map = new HashMap<>();
+        int[] sizes = {10,10,10,15,15,15,20,20,20};
+        String[] configList = {"[r:10,f:3]","[r:10,f:5]","[r:10,f:7]","[r:15,f:3]",
+                "[r:15,f:5]","[r:15,f:7]","[r:20,f:3]","[r:20,f:5]","[r:20,f:7]"};
+        System.out.println("\nFault Rate Total Average Per Configuration:");
+        String header = String.format("%-18s%-15s","Config Group","Average Rate");
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
+        for (int i = 1; i < 10; i++) {
+            Double average = (avg.get(i).get(0)/sizes[i-1] * 100 +
+                    avg.get(i).get(1)/sizes[i-1] * 100 + avg.get(i).get(2)/sizes[i-1] * 100) / 3;
+            System.out.println(String.format("%-18s%-15.2f",configList[i - 1], average));
+            System.out.println(border);
+            map.put(average, configList[i - 1]);
+        }
+        return map;
+    }
+
 
     private String tableBorder(String s)
     {
