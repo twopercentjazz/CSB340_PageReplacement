@@ -55,5 +55,7 @@ public class PageReplacementDriver {
         sim.printFaultCountResults();
         System.out.println();
         sim.printFaultRateResults();
+        System.out.println();
+        sim.printFaultCountAvgPerConfig(sim.configAvgs());
     }
 }
