@@ -6,10 +6,18 @@ time to spend cleaning up my code but c'est la vie.
 For my implementation I was able to correctly calculate fault rates, and I included all the fault counts in my 
 console output, but becaue the sizes of the reference strings varied I thought fault rate was a more descriptive
 value for analysis (to get a clearer picture of performance), so I also calculated all fault rates per 
-algorithm (per configuration). I included some of my console output below because every time you run my 
-program the results change because of the random numbers. To get a more accurate result I was going to run the 
-experiment multiple times and compare an aggregate of the results but I ran out of time. Instead I calculated 
-the averages of all algorithms per configuration to compare the different configurations against each other.
+algorithm (per configuration) see charts below. I included some of my console output below because every 
+time you run my program the results change because of the random numbers. To get a more accurate result I was 
+going to run the experiment multiple times and compare an aggregate of the results but I ran out of time. 
+Instead I calculated the averages of all algorithms per configuration to compare the different configurations 
+against each other. 
+
+As for the results, OPT often prformed the best (but as the book said its unrealistic to actually implement
+for paging and is used as a tool for analysis). FIFO and LRU were close and depending on the random 
+numbers that were generated sometimes FIFO was better and sometimes LRU was better. I almost expected 
+LRU to perform better more of hte time. As far as configurations go, like I said above I used the 
+combined average fault rate from all algorithms per configuration to produce one metric I could use 
+for comparison. Like the results show below [r:20,f:7] was often the best performing configuration. 
 
 
 <pre>
