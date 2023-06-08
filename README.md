@@ -1,7 +1,16 @@
 # CSB340_PageReplacement Report
-This was a fun project (and like you mentioned) it had a lot in common with the CPU scheduler project,
-so I mimicked that project borrowing the structure (and a little of the code). I only wish I had a 
-little more time to spend cleaning up my code but c'est la vie. 
+This was a fun project (and like you mentioned) it had a lot in common with the CPU scheduler project, so I
+mimicked that project borrowing the structure (and a little of the code). I only wish I had a little more 
+time to spend cleaning up my code but c'est la vie. 
+
+For my implementation I was able to correctly calculate fault rates, and I included all the fault counts in my 
+console output, but becaue the sizes of the reference strings varied I thought fault rate was a more descriptive
+value for analysis (to get a clearer picture of performance), so I also calculated all fault rates per 
+algorithm (per configuration). I included some of my console output below because every time you run my 
+program the results change because of the random numbers. To get a more accurate result I was going to run the 
+experiment multiple times and compare an aggregate of the results but I ran out of time. Instead I calculated 
+the averages of all algorithms per configuration to compare the different configurations against each other.
+
 
 <pre>
 Fault Rates:                                        Fault Rate Averages Per Configuration:
