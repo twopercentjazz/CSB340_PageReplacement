@@ -32,13 +32,52 @@ public class PageReplacementSimulation {
         }
     }
 
-    public void printResults() {
-        System.out.println(String.format("%-9s%-7s%-6s%-6s","Config",AlgorithmType.FIFO,
-                AlgorithmType.LRU,AlgorithmType.OPT));
+    public void printFaultCountResults() {
+        System.out.println("\nFault Counts:");
+        String header = String.format("%-9s%-7s%-6s%-6s","Config",AlgorithmType.FIFO,
+                AlgorithmType.LRU,AlgorithmType.OPT);
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
         for (int i = 0; i < getInput().getDefaultList().length; i++) {
             System.out.println(String.format("%-9d%-7s%-6s%-6s",i + 1,getResults().get(AlgorithmType.FIFO)[i],
                     getResults().get(AlgorithmType.LRU)[i],getResults().get(AlgorithmType.OPT)[i]));
+            System.out.println(border);
+            if ((i + 1) % 3 == 0 && (i + 1) % 21 != 0) {
+                System.out.println(border);
+            }
         }
+    }
+
+    public void printFaultRateResults() {
+        System.out.println("\nFault Rates:");
+        String header = String.format("%-11s%-9s%-8s%-8s","Config",AlgorithmType.FIFO,
+                AlgorithmType.LRU,AlgorithmType.OPT);
+        String border = tableBorder(header);
+        System.out.println(border + "\n" + header + "\n" + border);
+        for (int i = 0; i < getInput().getDefaultList().length; i++) {
+            System.out.println(String.format("%-11d%-9.0f%-8.0f%-8.0f",i + 1,
+                    (double) getResults().get(AlgorithmType.FIFO)[i] /
+                            getInput().getDefaultList()[i].getPageReferenceList().length * 100,
+                    (double) getResults().get(AlgorithmType.LRU)[i] /
+                            getInput().getDefaultList()[i].getPageReferenceList().length * 100,
+                    (double) getResults().get(AlgorithmType.OPT)[i] /
+                            getInput().getDefaultList()[i].getPageReferenceList().length * 100));
+            System.out.println(border);
+            if ((i + 1) % 3 == 0 && (i + 1) % 21 != 0) {
+                System.out.println(border);
+            }
+        }
+    }
+
+
+    private static String tableBorder(String s)
+    {
+        String temp = "";
+        for (int i = 0; i < s.length(); i++)
+        {
+            temp += "-";
+        }
+        return temp;
     }
 
 

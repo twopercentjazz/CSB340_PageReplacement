@@ -7,6 +7,8 @@
     <list default="true" id="1e965402-3705-47e3-bd17-795f815972cd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageReplacementDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/DefaultConfigurationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/DefaultConfigurationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementResults.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageReplacementUtilities/PageReplacementSimulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677550420561</updated>
-      <workItem from="1686124205540" duration="30073000" />
+      <workItem from="1686124205540" duration="33656000" />
     </task>
     <servers />
   </component>

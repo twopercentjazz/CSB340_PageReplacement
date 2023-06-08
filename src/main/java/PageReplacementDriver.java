@@ -24,6 +24,7 @@ public class PageReplacementDriver {
         System.out.println();
 
         //
+        System.out.println("\n\n\nConfiguration Legend:");
         DefaultConfigurationList testDefault = new DefaultConfigurationList();
         int count = 1;
         String space = " ";
@@ -45,6 +46,8 @@ public class PageReplacementDriver {
         System.out.println();
         PageReplacementSimulation sim = new PageReplacementSimulation();
         sim.runSimulation();
-        sim.printResults();
+        sim.printFaultCountResults();
+        System.out.println();
+        sim.printFaultRateResults();
     }
 }
