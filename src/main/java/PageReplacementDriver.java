@@ -24,8 +24,13 @@ public class PageReplacementDriver {
         System.out.println();
 
         //
-        System.out.println("\n\n\nConfiguration Legend:");
-        DefaultConfigurationList testDefault = new DefaultConfigurationList();
+        System.out.println();
+        PageReplacementSimulation sim = new PageReplacementSimulation();
+        DefaultConfigurationList testDefault = sim.getInput();
+
+
+        //
+        System.out.println("\nConfiguration Legend:");
         int count = 1;
         String space = " ";
         for (InputConfiguration config : testDefault.getDefaultList()) {
@@ -42,10 +47,11 @@ public class PageReplacementDriver {
             System.out.println();
         }
 
+
         //
-        System.out.println();
-        PageReplacementSimulation sim = new PageReplacementSimulation();
         sim.runSimulation();
+        System.out.println();
+        System.out.println();
         sim.printFaultCountResults();
         System.out.println();
         sim.printFaultRateResults();
